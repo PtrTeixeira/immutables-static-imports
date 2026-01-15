@@ -18,7 +18,7 @@ jobs:
           server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
           settings-path: ${{ github.workspace }} # location for the settings.xml file
 
-      - name: Build with Immutables 2.10.1
+      - name: Build with Immutables 2.11.2
         run: mvn clean verify -Dimmutables.version='2.11.2'
         continue-on-error: true
       - name: Build with Immutables 2.11.3
