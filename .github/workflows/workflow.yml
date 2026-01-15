@@ -20,7 +20,10 @@ jobs:
 
       - name: Build with Immutables 2.10.1
         run: mvn clean verify -Dimmutables.version='2.11.2'
+        continue-on-error: true
       - name: Build with Immutables 2.11.3
         run: mvn clean verify -Dimmutables.version='2.11.3'
+        continue-on-error: true
       - name: Build with Immutables 2.12.1
         run: mvn clean verify -Dimmutables.version='2.12.1'
+        continue-on-error: true

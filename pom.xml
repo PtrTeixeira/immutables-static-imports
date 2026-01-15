@@ -30,29 +30,6 @@
         <artifactId>encode</artifactId>
         <version>${immutables.version}</version>
       </dependency>
-      <dependency>
-        <groupId>org.junit.jupiter</groupId>
-        <artifactId>junit-jupiter-api</artifactId>
-        <version>6.0.1</version>
-      </dependency>
     </dependencies>
   </dependencyManagement>
-
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.14.0</version>
-        <configuration>
-          <release>21</release>
-          <encoding>utf-8</encoding>
-          <compilerArgs>
-            <arg>-parameters</arg>
-            <arg>-proc:full</arg>
-          </compilerArgs>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
 </project>
