@@ -1,7 +1,7 @@
 package com.ptrteixeira.immutables.test;
 
-import com.ptrteixeira.immutables.Box;
 import com.ptrteixeira.immutables.BoxEncodingEnabled;
+import com.ptrteixeira.immutables.box.Box;
 import org.immutables.value.Value;
 
 @Value.Immutable

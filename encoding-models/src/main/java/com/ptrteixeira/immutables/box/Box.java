@@ -1,4 +1,4 @@
-package com.ptrteixeira.immutables;
+package com.ptrteixeira.immutables.box;
 
 import java.util.List;
 

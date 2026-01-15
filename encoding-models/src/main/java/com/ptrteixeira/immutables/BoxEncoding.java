@@ -1,5 +1,9 @@
 package com.ptrteixeira.immutables;
 
+import static com.ptrteixeira.immutables.box.Box.headOfList;
+
+import com.ptrteixeira.immutables.box.Box;
+import java.util.List;
 import java.util.Objects;
 import org.immutables.encode.Encoding;
 
@@ -33,18 +37,18 @@ public class BoxEncoding<T> {
     public void set(Box<T> value) {
       this.field = Objects.requireNonNull(value);
     }
-//
-//    @Encoding.Init
-//    @Encoding.Naming(standard = Encoding.StandardNaming.PUT)
-//    public void put(T value) {
-//      this.field = Box.box(value);
-//    }
 
-//    @Encoding.Init
-//    @Encoding.Naming(standard = Encoding.StandardNaming.INIT)
-//    public void list(List<T> values) {
-//      this.field = Box.headOfList(values, null);
-//    }
+    @Encoding.Init
+    @Encoding.Naming(standard = Encoding.StandardNaming.PUT)
+    public void put(T value) {
+      this.field = Box.box(value);
+    }
+
+    @Encoding.Init
+    @Encoding.Naming(standard = Encoding.StandardNaming.INIT)
+    public void list(List<T> values) {
+      this.field = headOfList(values, null);
+    }
 
     @Encoding.Build
     Box<T> build() {
